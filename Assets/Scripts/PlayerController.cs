@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         Vector3 castPos = transform.position;
         castPos.y += 1;
-        if (Physics.Raycast(castPos, -transform.up, out hit, Mathf.Infinity))
+        if (Physics.Raycast(castPos, -transform.up, out hit, Mathf.Infinity, terrainLayer))
         {
             if (hit.collider != null)
             {
@@ -34,11 +34,19 @@ public class PlayerController : MonoBehaviour
             }    
         }
 
+
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
+
+        //testing
+        Debug.Log("Horizontal Input: " + x);
+        Debug.Log("Vertical Input: " + y);
+
+
         Vector3 moveDir = new Vector3(x, 0, y);
         rb.velocity = moveDir * speed;
 
+        //flipping based on the position we are moving
         if (x!= 0 && x < 0)
         {
             sr.flipX = true;
