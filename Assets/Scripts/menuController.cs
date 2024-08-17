@@ -44,6 +44,11 @@ public class menuController : MonoBehaviour
 
         }
 
+        if (string.Compare(clickedButton.name, "quitButton") == 0)
+        {
+            Application.Quit();
+        }
+
         clickedButton.GetComponent<Button>().interactable = true;
 
         changeMenu(menuToOpen);
@@ -81,6 +86,7 @@ public class menuController : MonoBehaviour
     public void clickBack() {
 
         // Play animation
+
         if(settingsMenu.activeSelf == true)
         {
             StartCoroutine(clickAnimate(backButtonSettings, mainMenu));
@@ -95,11 +101,9 @@ public class menuController : MonoBehaviour
 
     public void clickQuit() {
 
-
         // Play animation
 
         StartCoroutine(clickAnimate(quitButton, mainMenu));
-        Application.Quit();
 
     }
 
