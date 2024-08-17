@@ -2,13 +2,14 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class menuController : MonoBehaviour
 {
 
-    GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
+    public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
 
     public Sprite[] clickAnimationSprites;
 
@@ -16,15 +17,24 @@ public class menuController : MonoBehaviour
     void Start()
     {
 
-        mainMenu = GameObject.Find("mainMenu");
-        settingsMenu = GameObject.Find("settingsMenu");
-        savesMenu = GameObject.Find("savesMenu");
+        // Retrieve user settings
 
-        playButton = GameObject.Find("playButton");
-        settingsButton = GameObject.Find("settingsButton");
-        quitButton = GameObject.Find("quitButton");
-        backButtonSettings = GameObject.Find("backButtonSettings");
-        backButtonSaves = GameObject.Find("backButtonSaves");
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
+
+        GameObject.Find("volume").GetComponent<Slider>().value = AudioListener.volume;
+
+        if (String.Compare(PlayerPrefs.GetString("fullscreen"), "true") == 0)
+        {
+            GameObject.Find("fullscreenToggle").GetComponent<Toggle>().isOn = true;
+            Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, FullScreenMode.FullScreenWindow);
+        }
+        else
+        {
+            GameObject.Find("fullscreenToggle").GetComponent<Toggle>().isOn = false;
+            Screen.SetResolution(1080, 720, false);
+        }
+
+        // Initialize the main menu
 
         currentMenu = mainMenu;
         settingsMenu.SetActive(false);
@@ -106,6 +116,36 @@ public class menuController : MonoBehaviour
         StartCoroutine(clickAnimate(quitButton, mainMenu));
 
     }
+
+    public void changeVolume(System.Single vol)
+    {
+
+        PlayerPrefs.SetFloat("volume", vol);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
+
+    }
+
+    public void changeFullscreen(System.Boolean toggle)
+    {
+
+        if (toggle == true)
+        {
+            Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, FullScreenMode.FullScreenWindow);
+            PlayerPrefs.SetString("fullscreen", "true");
+        }
+        else
+        {
+            Screen.SetResolution(1080, 720, false);
+            PlayerPrefs.SetString("fullscreen", "false");
+        }
+
+    }
+
+    public void loadGame(int selectedSave)
+    {
+
+    }
+
 
 
 }
