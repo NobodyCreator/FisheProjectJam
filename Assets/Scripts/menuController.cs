@@ -41,7 +41,6 @@ public class menuController : MonoBehaviour
 
             clickedButton.GetComponent<Image>().overrideSprite = clickAnimationSprites[i];
             yield return new WaitForSeconds(0.02f);
-            Debug.Log("WAOW");
 
         }
 
