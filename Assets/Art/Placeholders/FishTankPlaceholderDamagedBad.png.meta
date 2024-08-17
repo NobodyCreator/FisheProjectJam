@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FishTankPlaceholderDamagedBad_0: -6113467760981084217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
