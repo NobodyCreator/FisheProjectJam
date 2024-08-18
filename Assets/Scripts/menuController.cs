@@ -3,13 +3,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class menuController : MonoBehaviour
 {
 
-    public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, pauseMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
+    public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, pauseMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves, volumeSlider;
 
     public Boolean pause, paused;
 
@@ -23,7 +24,7 @@ public class menuController : MonoBehaviour
 
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
 
-        GameObject.Find("volume").GetComponent<Slider>().value = AudioListener.volume;
+        volumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("volume");
 
         if (String.Compare(PlayerPrefs.GetString("fullscreen"), "true") == 0)
         {
@@ -74,7 +75,6 @@ public class menuController : MonoBehaviour
 
         }
 
-
     }
 
     IEnumerator clickAnimate(GameObject clickedButton, GameObject menuToOpen) {
@@ -93,10 +93,18 @@ public class menuController : MonoBehaviour
         {
             Application.Quit();
         }
+        else if ((string.Compare(clickedButton.name, "playButton") == 0) && pause == true)      
+        {
+            clickedButton.GetComponent<Button>().interactable = true;
+            unpause();
+        }
+        else
+        {
+            clickedButton.GetComponent<Button>().interactable = true;
 
-        clickedButton.GetComponent<Button>().interactable = true;
+            changeMenu(menuToOpen);
+        }
 
-        changeMenu(menuToOpen);
     }
 
     void changeMenu(GameObject menuToOpen)
@@ -189,11 +197,16 @@ public class menuController : MonoBehaviour
     public void clickUnpause()
     {
 
+        StartCoroutine(clickAnimate(playButton, pauseMenu));
+
+    }
+
+    public void unpause()
+    {
         paused = false;
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         AudioListener.pause = false;
-
     }
 
 }

@@ -78,9 +78,9 @@ public class PlayerController : MonoBehaviour
                 Collider[] hitColliders = Physics.OverlapSphere(transform.position, replenishRange);
                 foreach (var collide in hitColliders)
                 {
-                    if (GetComponent<Collider>().CompareTag("ReplenishObject"))
+                    if (collide.CompareTag("ReplenishObject"))
                     {
-                        ReplenishObject replenishObject = GetComponent<Collider>().GetComponent<ReplenishObject>();
+                        ReplenishObject replenishObject = collide.GetComponent<ReplenishObject>();
                         if (replenishObject != null && !replenishObject.IsUsed)
 
                         {
