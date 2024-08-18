@@ -1585,6 +1585,7 @@ MonoBehaviour:
   replenishRange: 5
   replenishAmount: 3
   replenishKey: 101
+  holdDuration: 2
 --- !u!54 &1855019245
 Rigidbody:
   m_ObjectHideFlags: 0
