@@ -195,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shittytaxi_0: 7353529697961076028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
