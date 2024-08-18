@@ -1,41 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class uiController : MonoBehaviour
 {
-    public GameObject electronicsSlider, fisheSlider, healthSlider;
+
+    public GameObject ePrompt;
+
+    float range;
+
+    bool display;
+
+    Collider[] hitColliders;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        ePrompt.SetActive(false);
+        range = gameObject.GetComponent<PlayerController>().replenishRange;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        display = false;
+
+        hitColliders = Physics.OverlapSphere(transform.position, range);
+
+        foreach (var collide in hitColliders) {
+            if (collide.CompareTag("ReplenishObject") && collide.GetComponent<ReplenishObject>().IsUsed == false) {
+
+                display = true;
+            
+            }
+        }
+
+        ePrompt.SetActive(display);
+
     }
 
-    public void takeDamage(int damageTaken)
-    {
-
-        healthSlider.GetComponent<Slider>().value -= damageTaken;
-
-    }
-
-    public void gainElectronics(int electronicsGained)
-    {
-
-        electronicsSlider.GetComponent<Slider>().value += electronicsGained;
-
-    }
-
-    public void gainPeople(int peopleGained) { 
-        
-        fisheSlider.GetComponent<Slider>().value += peopleGained;
-        
-    }
 }

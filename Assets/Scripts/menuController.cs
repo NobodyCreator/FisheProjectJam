@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class menuController : MonoBehaviour
 {
 
-    public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, pauseMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves, volumeSlider;
+    public GameObject mainMenu, settingsMenu, currentMenu, previousMenu, pauseMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
 
     public Boolean pause, paused;
 
@@ -21,10 +21,6 @@ public class menuController : MonoBehaviour
     {
 
         // Retrieve user settings
-
-        AudioListener.volume = PlayerPrefs.GetFloat("volume");
-
-        volumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("volume");
 
         if (String.Compare(PlayerPrefs.GetString("fullscreen"), "true") == 0)
         {
@@ -52,7 +48,6 @@ public class menuController : MonoBehaviour
 
             currentMenu = mainMenu;
             settingsMenu.SetActive(false);
-            savesMenu.SetActive(false);
 
         }
 
@@ -126,7 +121,7 @@ public class menuController : MonoBehaviour
 
         // Play animation
 
-        StartCoroutine(clickAnimate(playButton, savesMenu));
+        StartCoroutine(clickAnimate(playButton, mainMenu));
     }
     public void clickSettings() {
 
@@ -157,14 +152,6 @@ public class menuController : MonoBehaviour
         // Play animation
 
         StartCoroutine(clickAnimate(quitButton, mainMenu));
-
-    }
-
-    public void changeVolume(System.Single vol)
-    {
-
-        PlayerPrefs.SetFloat("volume", vol);
-        AudioListener.volume = PlayerPrefs.GetFloat("volume");
 
     }
 

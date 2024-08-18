@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638595781503522809
+  platformSettingsDirtyTick: 638595954847290275
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Fishe Rampayge UI
     originalName: 
-    pivot: {x: 1.0500001, y: -0.42372885}
+    pivot: {x: 1.0500001, y: -0.1830986}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -131,8 +131,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 40
-      height: 59
-    spriteID: 28385e3605135874e9a574aba766283e
+      height: 71
+    spriteID: 8cd62928b0688ca46bb0b0e2aa3529de
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,10 +150,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 7
-      y: 47
+      y: 59
       width: 11
       height: 16
-    spriteID: 6e592bc593a67864bbec59a0d5d7d13b
+    spriteID: 2bb95d63b3e038f4685504976513fe89
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,10 +170,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 23
-      y: 52
+      y: 64
       width: 21
       height: 7
-    spriteID: 91c55ee6892d6ed42bd9ed252586ad71
+    spriteID: 3dcf7c9ff543e9c4d9b3ad2d39b1093c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,10 +190,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 35
+      y: 47
       width: 18
       height: 11
-    spriteID: 53234b2fcf308354aa65564bdb7dba58
+    spriteID: bb5814be60fece64aa8f954d00c4550f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,10 +210,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 46
+      y: 58
       width: 19
       height: 5
-    spriteID: 2285b40802512da4899281bc8246b282
+    spriteID: cda78172dc8704e43a6ba59d497ab9d8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,10 +230,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 23
-      y: 37
+      y: 49
       width: 21
       height: 7
-    spriteID: 55e277c1cf857514eae90cebf3393e07
+    spriteID: c82b9bfda6a378e438bdf9eb2597f701
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,10 +250,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 6
-      y: 20
+      y: 32
       width: 13
       height: 11
-    spriteID: 6783a0e86e09bb2478092cf76cbfda5f
+    spriteID: 75f47e244d9d91d47b1c20bf1314cfc2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,10 +270,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 31
+      y: 43
       width: 19
       height: 5
-    spriteID: 507e7c2f931bc754a8ddfc074b133f91
+    spriteID: 5bc6f78fd39c60247a4547665a28937c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,10 +290,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 23
-      y: 22
+      y: 34
       width: 21
       height: 7
-    spriteID: 9afb79f2290a5f745a4967d2aa2aecc1
+    spriteID: f713ebf761397c94f8d1db920500f774
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,10 +310,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 24
-      y: 16
+      y: 28
       width: 19
       height: 5
-    spriteID: b573e71c89986324893eb086d76df3c2
+    spriteID: 11ad889a199297c459c062ca4eee7ca2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,10 +330,30 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 16
       width: 31
       height: 11
-    spriteID: 12f207a48bf2a8249ab1a96da7124536
+    spriteID: 318342e4a843dd84ca151f0a32fb2a24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Fishe Rampayge UI_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 6
+      height: 11
+    spriteID: 487ed496699baea4e962d1f7d5a938da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -354,10 +374,10 @@ ScriptedImporter:
       frameIndex: 0
       cellRect:
         x: 1
-        y: 25
+        y: 13
         width: 40
-        height: 59
-      spriteId: 28385e3605135874e9a574aba766283e
+        height: 71
+      spriteId: 8cd62928b0688ca46bb0b0e2aa3529de
     linkedCells: []
     parentIndex: -1
   platformSettings:

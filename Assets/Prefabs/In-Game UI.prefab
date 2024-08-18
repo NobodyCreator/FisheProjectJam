@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2295796284312381041, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -3900509979882759293, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5013089049619168174, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -445115207096227334, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8429764466765926020, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -4093503039278214963, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8803533841828736698, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -3592291110682096390, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -742,8 +742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -367.8345, y: 196.2249}
-  m_SizeDelta: {x: 0.11, y: 0.16}
+  m_AnchoredPosition: {x: -366.32834, y: 192.48424}
+  m_SizeDelta: {x: 0.1156, y: 0.1835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3578057967802751723
 CanvasRenderer:
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4982172292929249549, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: 5060700630541990986, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -854,8 +854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365.4016, y: 141.5897}
-  m_SizeDelta: {x: 0.16, y: 0.09}
+  m_AnchoredPosition: {x: -363.77237, y: 129.83951}
+  m_SizeDelta: {x: 0.1681, y: 0.1032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7344706320923223956
 CanvasRenderer:
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7781655761496769007, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: 130642699684892513, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2343190020859502355, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -3113435641979652538, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1041,8 +1041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -367.3292, y: 86.4713}
-  m_SizeDelta: {x: 0.13, y: 0.11}
+  m_AnchoredPosition: {x: -365.79745, y: 66.640686}
+  m_SizeDelta: {x: 0.1366, y: 0.1261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7926032868799691202
 CanvasRenderer:
@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 409629744514319085, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: 1112300579046464229, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1420423906811188181, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -4908030180632503766, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

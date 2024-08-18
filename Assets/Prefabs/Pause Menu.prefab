@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7800342022384792512, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
+  m_Sprite: {fileID: -9033203545864691901, guid: f8d6786461efad742b8524603b7f7dae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -312,6 +312,7 @@ MonoBehaviour:
   quitButton: {fileID: 0}
   backButtonSettings: {fileID: 0}
   backButtonSaves: {fileID: 0}
+  volumeSlider: {fileID: 0}
   pause: 0
   paused: 0
   clickAnimationSprites: []

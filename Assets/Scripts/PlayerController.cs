@@ -66,8 +66,6 @@ public class PlayerController : MonoBehaviour
             sr.flipX = false;
         }
 
-
-
         if (Input.GetKey(replenishKey))
         {
             holdTimer += Time.deltaTime;
