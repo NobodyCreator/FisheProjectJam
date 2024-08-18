@@ -11,7 +11,7 @@ public class menuController : MonoBehaviour
 
     public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, pauseMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
 
-    public Boolean pause;
+    public Boolean pause, paused;
 
     public Sprite[] clickAnimationSprites;
 
@@ -54,6 +54,26 @@ public class menuController : MonoBehaviour
             savesMenu.SetActive(false);
 
         }
+
+    }
+
+    private void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+
+            if (paused == false)
+            {
+                clickPause();
+            }
+            else
+            {
+                clickUnpause();
+            }
+
+        }
+
 
     }
 
@@ -159,9 +179,20 @@ public class menuController : MonoBehaviour
     public void clickPause()
     {
 
+        paused = true;
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
         AudioListener.pause = true;
+
+    }
+
+    public void clickUnpause()
+    {
+
+        paused = false;
+        Time.timeScale = 1f;
+        pauseMenu.SetActive(false);
+        AudioListener.pause = false;
 
     }
 

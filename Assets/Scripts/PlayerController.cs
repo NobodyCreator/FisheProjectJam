@@ -49,8 +49,8 @@ public class PlayerController : MonoBehaviour
         float y = Input.GetAxis("Vertical");
 
         //testing
-        Debug.Log("Horizontal Input: " + x);
-        Debug.Log("Vertical Input: " + y);
+        //Debug.Log("Horizontal Input: " + x);
+        //Debug.Log("Vertical Input: " + y);
 
 
         Vector3 moveDir = new Vector3(x, 0, y);
