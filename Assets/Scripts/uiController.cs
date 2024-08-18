@@ -25,4 +25,17 @@ public class uiController : MonoBehaviour
         healthSlider.GetComponent<Slider>().value -= damageTaken;
 
     }
+
+    public void gainElectronics(int electronicsGained)
+    {
+
+        electronicsSlider.GetComponent<Slider>().value += electronicsGained;
+
+    }
+
+    public void gainPeople(int peopleGained) { 
+        
+        fisheSlider.GetComponent<Slider>().value += peopleGained;
+        
+    }
 }

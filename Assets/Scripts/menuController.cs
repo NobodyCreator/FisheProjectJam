@@ -9,7 +9,9 @@ using UnityEngine.UI;
 public class menuController : MonoBehaviour
 {
 
-    public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
+    public GameObject mainMenu, savesMenu, settingsMenu, currentMenu, previousMenu, pauseMenu, playButton, settingsButton, quitButton, backButtonSettings, backButtonSaves;
+
+    public Boolean pause;
 
     public Sprite[] clickAnimationSprites;
 
@@ -34,11 +36,24 @@ public class menuController : MonoBehaviour
             Screen.SetResolution(1080, 720, false);
         }
 
-        // Initialize the main menu
+        // Initialize the relevant menu
 
-        currentMenu = mainMenu;
-        settingsMenu.SetActive(false);
-        savesMenu.SetActive(false);
+        if(pause == true)
+        {
+
+            currentMenu = pauseMenu;
+            pauseMenu.SetActive(false);
+            settingsMenu.SetActive(false);
+
+        }
+        else
+        {
+
+            currentMenu = mainMenu;
+            settingsMenu.SetActive(false);
+            savesMenu.SetActive(false);
+
+        }
 
     }
 
@@ -50,7 +65,7 @@ public class menuController : MonoBehaviour
         {
 
             clickedButton.GetComponent<Image>().overrideSprite = clickAnimationSprites[i];
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSecondsRealtime(0.02f);
 
         }
 
@@ -138,6 +153,15 @@ public class menuController : MonoBehaviour
             Screen.SetResolution(1080, 720, false);
             PlayerPrefs.SetString("fullscreen", "false");
         }
+
+    }
+
+    public void clickPause()
+    {
+
+        Time.timeScale = 0f;
+        pauseMenu.SetActive(true);
+        AudioListener.pause = true;
 
     }
 
