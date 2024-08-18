@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        PlayerPrefs.SetFloat("health", currentHealth);
+        PlayerPrefs.SetFloat("health", (float)currentHealth);
         healthBar.GetComponent<Slider>().value = currentHealth;
 
         if (currentHealth <= 0)
