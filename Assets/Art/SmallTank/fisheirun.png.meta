@@ -339,7 +339,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fisheirun_0: -286896977886854628
+      fisheirun_1: 2145928530099006284
+      fisheirun_2: -1431795449086371920
+      fisheirun_3: 2699440842077474034
+      fisheirun_4: -2402589423913831855
+      fisheirun_5: -8726069297128787011
+      fisheirun_6: -7574610587731258603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
