@@ -240,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 209034805}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.198, y: -0.269, z: 0.048}
+  m_LocalPosition: {x: 0.198, y: -0.1740102, z: 0.048}
   m_LocalScale: {x: 0.03, y: -0.21, z: 0.12}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -385,14 +385,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210311546}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22268884, y: 0.02289443, z: -0.008457228, w: 0.97458404}
-  m_LocalPosition: {x: -5.4085846, y: 26.410452, z: -2.86771}
+  m_LocalRotation: {x: 0.10356328, y: 0.025430458, z: -0.0051393686, w: 0.99428445}
+  m_LocalPosition: {x: -5.495057, y: 24.12804, z: -3.6425586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1292745693}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 25.75, y: 2.6, z: -0.4}
+  m_LocalEulerAnglesHint: {x: 11.9, y: 2.9, z: -0.29}
 --- !u!1 &291666334
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ Transform:
   m_GameObject: {fileID: 291666334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15600014, y: -0.24198914, z: 0.065999985}
+  m_LocalPosition: {x: -0.15600014, y: -0.147, z: 0.065999985}
   m_LocalScale: {x: 0.03, y: -0.21, z: 0.12}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -713,8 +713,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22268884, y: 0.02289443, z: -0.008457228, w: 0.97458404}
-  m_LocalPosition: {x: -5.408584, y: 26.41045, z: -2.86771}
+  m_LocalRotation: {x: 0.10356328, y: 0.025430458, z: -0.0051393686, w: 0.99428445}
+  m_LocalPosition: {x: -5.495057, y: 24.12804, z: -3.6425586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 1855019246}
   - component: {fileID: 1855019245}
   - component: {fileID: 1855019244}
+  - component: {fileID: 1855019248}
   m_Layer: 0
   m_Name: FishTankPlaceholder_0
   m_TagString: Untagged
@@ -871,7 +872,7 @@ Transform:
   m_GameObject: {fileID: 1855019242}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0.33}
+  m_LocalPosition: {x: 0, y: 0.018, z: 0.33}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -891,8 +892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b387b8934d742274db25081277fc6f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  groundDist: 0.59
+  speed: 5
+  groundDist: 0.6
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1000,6 +1001,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1855019248
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855019242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3dcc3bddcbf7ad74387cdec1d909d37c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
