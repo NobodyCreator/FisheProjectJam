@@ -1289,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6000567475917141339, guid: dc9fdc2bd263a4a41a070fc068389d42, type: 3}
+      propertyPath: ePrompt
+      value: 
+      objectReference: {fileID: 1849113095}
     - target: {fileID: 7355165939525363771, guid: dc9fdc2bd263a4a41a070fc068389d42, type: 3}
       propertyPath: m_Value
       value: 1
@@ -1309,7 +1313,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: In-Game UI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6000567475917141339, guid: dc9fdc2bd263a4a41a070fc068389d42, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2492,6 +2497,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1711004327573535552, guid: 73c187151916d614c88fccb4904d69e8, type: 3}
   m_PrefabInstance: {fileID: 1146108712}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1849113095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7138373723726190508, guid: d9eaac34fe7d8734db041a75e0f10fab, type: 3}
+  m_PrefabInstance: {fileID: 996007096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855019242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,6 +2517,7 @@ GameObject:
   - component: {fileID: 1855019244}
   - component: {fileID: 1855019248}
   - component: {fileID: 1855019249}
+  - component: {fileID: 1855019250}
   m_Layer: 0
   m_Name: FishTankPlaceholder_0
   m_TagString: Untagged
@@ -2700,6 +2711,19 @@ MonoBehaviour:
   healthBar: {fileID: 452444926}
   electronicsBar: {fileID: 1328633323}
   fisheBar: {fileID: 115718967}
+--- !u!114 &1855019250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855019242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64b2f3b05b215b4ca8ed72a12780281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ePrompt: {fileID: 1849113095}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
