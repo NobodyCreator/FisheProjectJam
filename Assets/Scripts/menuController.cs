@@ -141,11 +141,4 @@ public class menuController : MonoBehaviour
 
     }
 
-    public void loadGame(int selectedSave)
-    {
-
-    }
-
-
-
 }
