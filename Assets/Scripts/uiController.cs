@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class uiController : MonoBehaviour
 {
@@ -16,5 +17,12 @@ public class uiController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void takeDamage(int damageTaken)
+    {
+
+        healthSlider.GetComponent<Slider>().value -= damageTaken;
+
     }
 }
