@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ReplenishObject
   - EnemyObject
+  - musicVolume
+  - seVolume
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class menuController : MonoBehaviour
@@ -125,6 +126,8 @@ public class menuController : MonoBehaviour
         // Play animation
 
         StartCoroutine(clickAnimate(playButton, mainMenu));
+
+        SceneManager.LoadScene(1);
     }
     public void clickSettings() {
 

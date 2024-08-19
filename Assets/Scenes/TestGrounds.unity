@@ -335,7 +335,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9194723345426570509, guid: 83bffcf02259553428d148ab8cbcf7a1, type: 3}
+  m_Sprite: {fileID: -2359294167293357336, guid: 8aa483c80ca05aa48bb85708693c8a92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1345,7 +1345,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 9211683763439471630, guid: 9ecda54bc0b35714a8932169b23b2949, type: 3}
+  m_Sprite: {fileID: -506610341874609649, guid: 5d17639d9fb332243b370ed0d765e656, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2447,6 +2447,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6037838553693020275, guid: c7976c5e9d220fe4f839eac695fd8168, type: 3}
+      propertyPath: m_TagString
+      value: seVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 6043691424193601093, guid: c7976c5e9d220fe4f839eac695fd8168, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2474,6 +2478,10 @@ PrefabInstance:
     - target: {fileID: 7565286687675080269, guid: c7976c5e9d220fe4f839eac695fd8168, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678386714901105446, guid: c7976c5e9d220fe4f839eac695fd8168, type: 3}
+      propertyPath: m_TagString
+      value: musicVolume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

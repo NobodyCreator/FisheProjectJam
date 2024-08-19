@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class audioManager : MonoBehaviour
@@ -12,8 +13,14 @@ public class audioManager : MonoBehaviour
     public GameObject musicVolumeSlider, soundEffectVolumeSlider;
 
     // Start is called before the first frame update
+
     void Start()
     {
+
+        DontDestroyOnLoad(this.gameObject);
+
+        musicVolumeSlider = GameObject.FindWithTag("musicVolume");
+        soundEffectVolumeSlider = GameObject.FindWithTag("seVolume");
 
         musicVolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume");
         audioMixer.SetFloat("Music", PlayerPrefs.GetFloat("musicVolume"));
@@ -21,11 +28,6 @@ public class audioManager : MonoBehaviour
         soundEffectVolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("soundEffectVolume");
         audioMixer.SetFloat("Sound Effects", PlayerPrefs.GetFloat("soundEffectVolume"));
 
-    }
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void changeMusicVolume(float volume)
