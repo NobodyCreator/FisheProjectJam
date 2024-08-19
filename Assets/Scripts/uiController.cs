@@ -31,7 +31,7 @@ public class uiController : MonoBehaviour
         hitColliders = Physics.OverlapSphere(transform.position, range);
 
         foreach (var collide in hitColliders) {
-            if ((collide.CompareTag("ReplenishObject") && collide.GetComponent<ReplenishObject>().IsUsed == false) || collide.CompareTag("Human") && collide.GetComponent<npcController>().suckable == true) {
+            if ((collide.CompareTag("ReplenishObject") && collide.GetComponent<ReplenishObject>().IsUsed == false) || collide.CompareTag("EnemyObject") && collide.GetComponent<npcController>().suckable == true) {
 
                 display = true;
             

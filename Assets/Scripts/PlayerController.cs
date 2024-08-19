@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
                             break;
                         }
                     }
-                    else if (collide.CompareTag("Human"))
+                    else if (collide.CompareTag("EnemyObject"))
                     {
 
                         npcController humanObject = collide.GetComponent<npcController>();

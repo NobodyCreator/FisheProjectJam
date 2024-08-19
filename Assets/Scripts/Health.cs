@@ -31,6 +31,22 @@ public class Health : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+
+        if (maxElectronics == currentElectronics)
+        {
+            //WINNAR
+        }
+
+        if (fisheAmount == currentFishe) { 
+        
+            //UPGRADE
+        
+        }
+
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -52,7 +68,8 @@ public class Health : MonoBehaviour
 
     public void takeHuman (int amount)
     {
-
+        currentFishe = Mathf.Min(currentFishe + amount, fisheAmount);
+        fisheBar.GetComponent <Slider>().value = currentFishe;
     }
 
         void Death()
