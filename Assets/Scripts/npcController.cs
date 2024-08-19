@@ -52,13 +52,7 @@ public class npcController : MonoBehaviour
             else
             {
                 moving = true;
-
-                //float movementX = Random.Range(-moveRange, moveRange);
-                //float movementZ = Random.Range(-moveRange, moveRange);
-
-                //Vector3 newPos = new Vector3((this.transform.position.x + movementX), (this.transform.position.y), (this.transform.position.z + movementZ));
-                //Debug.Log(newPos);
-                //StartCoroutine(move(newPos));
+                possible = false;
 
                 Vector3 newPos = this.transform.position;
                 RaycastHit hitInfo;
