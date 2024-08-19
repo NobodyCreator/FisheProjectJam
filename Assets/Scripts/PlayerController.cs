@@ -89,6 +89,23 @@ public class PlayerController : MonoBehaviour
                             break;
                         }
                     }
+                    else if (collide.CompareTag("Human"))
+                    {
+
+                        npcController humanObject = collide.GetComponent<npcController>();
+
+                        if(humanObject != null && humanObject.suckable)
+                        {
+
+                            health.takeHuman(1);
+                            Debug.Log("Human Absorbed");
+                            Destroy(humanObject.gameObject);
+                            holdTimer = 0f;
+                            break;
+
+                        }
+
+                    }
                 }
             }
         }

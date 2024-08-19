@@ -1126,9 +1126,10 @@ GameObject:
   - component: {fileID: 1024413954}
   - component: {fileID: 1024413956}
   - component: {fileID: 1024413955}
+  - component: {fileID: 1024413957}
   m_Layer: 0
   m_Name: pilceguy_0
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1225,6 +1226,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1024413957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024413953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5919f50607dea114eb30fc2f41ef92f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnemy: 1
+  suckable: 1
+  isDead: 0
 --- !u!1001 &1025500173
 PrefabInstance:
   m_ObjectHideFlags: 0

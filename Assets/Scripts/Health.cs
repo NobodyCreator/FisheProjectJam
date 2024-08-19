@@ -50,6 +50,11 @@ public class Health : MonoBehaviour
         electronicsBar.GetComponent<Slider>().value = currentElectronics;
     }
 
+    public void takeHuman (int amount)
+    {
+
+    }
+
         void Death()
         {
             Destroy(gameObject);//kills lil bro for now
