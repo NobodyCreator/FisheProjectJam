@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
 
     private float holdTimer = 0f;//toimer that tracks lenght of button held
 
+    public float attackRange = 4f;//HAHA KILLLL
+    public int attackDamage = 10;
+    public LayerMask enemyLayer;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
@@ -113,8 +117,27 @@ public class PlayerController : MonoBehaviour
         {
             holdTimer = 0f; //reset timer if key not held
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
     }
 
+    void Attack()
+    {
+        Collider[] hitEnemies = Physics.OverlapSphere(transform.position, attackRange, enemyLayer);
+
+        foreach (Collider enemy in hitEnemies)
+        {
+            if ((sr.flipX && enemy.transform.position.x < transform.position.x) ||
+                (!sr.flipX && enemy.transform.position.x > transform.position.x))
+            {
+                enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                Debug.Log("enemy atTAco");
+            }
+        }
+    }
 
 
     public void TakeDamage(int damage)
