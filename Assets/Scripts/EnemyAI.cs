@@ -11,9 +11,12 @@ public class EnemyAI : MonoBehaviour
     public int damage = 10;// ze enemy FAKS Yyou
     private bool isPlayerInRange = false;
     private bool isAttacking = false;
-  
+    private SpriteRenderer sr;
 
-
+    void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
 
 
     void Update()
@@ -22,7 +25,7 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer <= detectionRadius)
         {
             isPlayerInRange = true;
-            FacePlayer();
+            FlipSprite();
             if (!isAttacking)
             {
                 StartCoroutine(AttackPlayer());
@@ -34,21 +37,25 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void FacePlayer()
+    void FlipSprite()
     {
-        Vector3 direction = Player.position - transform.position;
-        direction.z = 1; //if 0 then he becomes a fucking statue if 1 he goes insane
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 5f);//maybe 
+        if (Player.position.x < transform.position.x)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
     }
 
     IEnumerator AttackPlayer()
     {
         isAttacking = true;
 
-        while(isPlayerInRange)
+        while (isPlayerInRange)
         {
-            Player.GetComponent<Health>().TakeDamage(damage); //gimme the healthussy
+            Player.GetComponent<Health>().TakeDamage(damage);
             yield return new WaitForSeconds(attackInterval);
         }
         isAttacking = false;

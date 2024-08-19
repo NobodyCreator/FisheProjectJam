@@ -1126,9 +1126,10 @@ GameObject:
   - component: {fileID: 1024413954}
   - component: {fileID: 1024413956}
   - component: {fileID: 1024413955}
+  - component: {fileID: 1024413957}
   m_Layer: 0
   m_Name: pilceguy_0
-  m_TagString: Untagged
+  m_TagString: EnemyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,7 +1143,7 @@ Transform:
   m_GameObject: {fileID: 1024413953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.31248474, y: 2.0233536, z: -3.9442015}
+  m_LocalPosition: {x: 0.31248474, y: 2.0233536, z: -4.978}
   m_LocalScale: {x: 2, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1225,6 +1226,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1024413957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024413953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d7555411a7fd840b5275d12b863e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1855019243}
+  detectionRadius: 300
+  attackInterval: 5
+  damage: 10
 --- !u!1001 &1025500173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2564,8 +2581,13 @@ MonoBehaviour:
   health: {fileID: 0}
   replenishRange: 5
   replenishAmount: 3
-  replenishKey: 101
+  replenishKey: 265
   holdDuration: 2
+  attackRange: 4
+  attackDamage: 10
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!54 &1855019245
 Rigidbody:
   m_ObjectHideFlags: 0
