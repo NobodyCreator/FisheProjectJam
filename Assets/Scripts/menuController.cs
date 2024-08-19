@@ -42,6 +42,9 @@ public class menuController : MonoBehaviour
             pauseMenu.SetActive(false);
             settingsMenu.SetActive(false);
 
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
         }
         else
         {
@@ -56,7 +59,7 @@ public class menuController : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        if (Input.GetKeyDown(KeyCode.Escape) == true && pause == true)
         {
 
             if (paused == false)
@@ -179,10 +182,16 @@ public class menuController : MonoBehaviour
         pauseMenu.SetActive(true);
         AudioListener.pause = true;
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
     }
 
     public void clickUnpause()
     {
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         StartCoroutine(clickAnimate(playButton, pauseMenu));
 

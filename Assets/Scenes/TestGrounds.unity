@@ -1127,7 +1127,7 @@ GameObject:
   - component: {fileID: 1024413956}
   - component: {fileID: 1024413955}
   - component: {fileID: 1024413957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pilceguy_0
   m_TagString: EnemyObject
   m_Icon: {fileID: 0}
