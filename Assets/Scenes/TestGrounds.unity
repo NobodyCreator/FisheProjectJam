@@ -269,6 +269,7 @@ MonoBehaviour:
   moveRange: 1
   speed: 0.05
   waitTime: 0
+  distance: 0
 --- !u!136 &171481933
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -291,7 +292,7 @@ CapsuleCollider:
   m_Radius: 0.105
   m_Height: 0.26
   m_Direction: 1
-  m_Center: {x: -0.04, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &171481934
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1374,6 +1375,7 @@ MonoBehaviour:
   moveRange: 0
   speed: 0
   waitTime: 0
+  distance: 0
 --- !u!114 &1024413958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2835,7 +2837,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -286896977886854628, guid: 0741b64d1d2dce04699098e3efc8250c, type: 3}
+  m_Sprite: {fileID: 7976619392837948879, guid: 337710c789a8ff8408507bbb664582bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

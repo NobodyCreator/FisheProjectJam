@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.ReorderableList;
+using UnityEditor;
 using UnityEngine;
 
 public class npcController : MonoBehaviour
@@ -8,7 +9,9 @@ public class npcController : MonoBehaviour
 
     public bool isEnemy, suckable, isDead;
 
-    public float moveRange, speed, waitTime;
+    public float moveRange, speed, waitTime, distance;
+
+    Vector3 direction;
 
     bool moving, possible;
 
@@ -64,15 +67,18 @@ public class npcController : MonoBehaviour
                     float movementZ = Random.Range(-moveRange, moveRange);
 
                     newPos = new Vector3((this.transform.position.x + movementX), (this.transform.position.y), (this.transform.position.z + movementZ));
-                    Debug.Log(newPos);
 
-                    if (Physics.BoxCast(this.transform.position, new Vector3(0.1f, 0.1f, 0.1f), (this.transform.position - newPos).normalized, out hitInfo, Quaternion.identity, Vector3.Distance(newPos, this.transform.position)))
+                    distance = Vector3.Distance(newPos, this.transform.position);
+                    direction = (this.transform.position - newPos).normalized;
+
+                    if (Physics.BoxCast(this.transform.position, new Vector3(1f, 1f, 1f), -direction, out hitInfo, Quaternion.identity, distance))
                     {
-                        Debug.Log("hit");
+                    
+                        possible = false;
+
                     }
                     else
                     {
-                        Debug.Log(newPos);
                         possible = true;
                     }
                 }
@@ -118,7 +124,5 @@ public class npcController : MonoBehaviour
         }
 
     }
-
-
 
 }
