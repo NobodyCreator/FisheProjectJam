@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        Player = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
 

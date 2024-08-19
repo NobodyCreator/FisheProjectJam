@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
             if ((sr.flipX && enemy.transform.position.x < transform.position.x) ||
                 (!sr.flipX && enemy.transform.position.x > transform.position.x))
             {
-                enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                enemy.GetComponent<npcController>().takeDamage(attackDamage);
                 Debug.Log("enemy atTAco");
             }
         }
