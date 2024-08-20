@@ -42,6 +42,8 @@ public class Health : MonoBehaviour
         if (fisheAmount == currentFishe) { 
         
             //UPGRADE
+            // TODO: FOR NOW MAKE THE GUY FASTER AND uhhhhhhhhhhhhhhhhhhh idk
+            // PUNCH HARDA
         
         }
 
@@ -70,6 +72,12 @@ public class Health : MonoBehaviour
     {
         currentFishe = Mathf.Min(currentFishe + amount, fisheAmount);
         fisheBar.GetComponent <Slider>().value = currentFishe;
+    }
+
+    public void Healing(int amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        healthBar.GetComponent<Slider>().value = currentHealth;
     }
 
         void Death()

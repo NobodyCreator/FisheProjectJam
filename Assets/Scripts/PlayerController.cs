@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     public Health health;
 
-    public float replenishRange = 100f; // Range within which tank replenishes shit
+    public float replenishRange = 4f; // Range within which tank replenishes shit
     public int replenishAmount = 3;//amount to replenish
     public KeyCode replenishKey = KeyCode.E;// press EEEEEEEEEEEEEEE
     public float holdDuration = 2f;
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
         health = gameObject.GetComponent<Health>();
     }
 
@@ -89,7 +90,20 @@ public class PlayerController : MonoBehaviour
                             health.TakeElectronics(replenishAmount);
                             Debug.Log("Electronics Replenished");
                             replenishObject.Use();//object = used
+                            IncreasePlayerSize();// BIIIIIIIIIIIIIIIIIIIIIIG
                             holdTimer = 0f;
+                            break;
+                        }
+                    }
+                    else if (collide.CompareTag("HealingObject"))
+                    {
+                        HealingObject healingObject = collide.GetComponent<HealingObject>();
+                        if (healingObject != null && !healingObject.IsUsed)
+                        {
+                            health.Healing(replenishAmount);
+                            Debug.Log("Health Replenished");
+                            healingObject.Use();
+                            holdTimer = 5f;
                             break;
                         }
                     }
@@ -122,6 +136,12 @@ public class PlayerController : MonoBehaviour
         {
             Attack();
         }
+    }
+
+    void IncreasePlayerSize()
+    {
+        transform.localScale += new Vector3(0.2f, 0.2f, 0); //guy gets bigger
+        transform.position += new Vector3(0, 1f, 0);//anti stuck in terrain
     }
 
     void Attack()
