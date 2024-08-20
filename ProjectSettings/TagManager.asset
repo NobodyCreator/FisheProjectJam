@@ -8,6 +8,7 @@ TagManager:
   - EnemyObject
   - musicVolume
   - seVolume
+  - HealingObject
   layers:
   - Default
   - TransparentFX
